@@ -1,0 +1,3 @@
+Translate 0xabcdef12 into decimal
+
+2'882'400'018
