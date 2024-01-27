@@ -1,0 +1,15 @@
+Assume that registers $s0 and $s1 hold the values 0x80000000 and 0xD0000000,
+respectively.
+
+(a) What is the value of $t0 for the following assembly code? 
+	add $t0, $s0, $s1
+	
+	Ans: Register $t0 will have a value of 0x50000000
+(b) Is the result in $t0 the desired result, or has there been overflow?
+
+	Ans: There has been overflow.
+
+(c) For the contents of registers $ s0 and $ s1 as specified above, What is the value of $t0 for the following assembly code?
+	sub $t0, $s0, $s1
+	
+	Ans: 0xB0000000
