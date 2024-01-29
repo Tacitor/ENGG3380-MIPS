@@ -1,9 +1,9 @@
 	.data
-arrayD:	.word	13 : 24
+arrayD:	.word	13 : 20
 	.text	
 main:
-	addi $s0, $0, 5 #init a = 2
-	addi $s1, $0, 7 #init b = 4
+	addi $s0, $0, 4 #init a = 2
+	addi $s1, $0, 6 #init b = 4
 
 	addi $t0, $0, 0 #init i = 0
 loop1:	slt $t5, $t0, $s0 #test for i < a
@@ -23,5 +23,7 @@ loop2:	slt $t4, $t1, $s1 #test for j < b
 	j loop2
 Done2:  addi $t0, $t0, 1 # i++
 	j loop1
-Done1:
+Done1:	li $v0, 10 	#prep syscal to return from the program
+	add $a0, $0, $0	#put a 0 in the return argument
+	syscall		#make the syscall
 	
